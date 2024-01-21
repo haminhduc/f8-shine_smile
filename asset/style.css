@@ -17,10 +17,26 @@ body {
   max-width: calc(100% - 48px);
   margin: 0 auto;
 }
+.btn {
+  --heigh: 60px;
+
+  display: inline-block;
+  min-width: 205px;
+  height: var(--heigh);
+  padding: 0 20px;
+  line-height: var(--heigh);
+  border-radius: 99px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+  background: #2e80ce;
+}
 /* Header */
 .header {
   min-height: 100vh;
   background-color: var(--header-bg);
+  padding-top: 30px;
 }
 /* logo */
 .logo {
@@ -61,4 +77,44 @@ body {
 .logo__brand--sm {
   font-size: 1.3em;
   font-weight: 300;
+}
+/* header-top */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* navbar */
+.navbar__list {
+  display: flex;
+}
+.action__login,
+.navbar__link {
+  padding: 4px 21px;
+  font-style: 1.6rem;
+  font-weight: 300;
+  color: #c9d2da;
+}
+.navbar__link--active {
+  text-shadow: 1px 0 0 currentColor;
+}
+.navbar__link--active::before {
+  position: relative;
+  content: "";
+  top: -2px;
+  left: -8px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.navbar__link:hover,
+.navbar__link--active {
+  color: #ffffff;
+  text-shadow: 1px 0 0 currentColor;
+}
+.action__signup {
+  --heigh: 44px;
+  min-width: 104px;
 }
